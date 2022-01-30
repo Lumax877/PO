@@ -1,20 +1,18 @@
-// Na podstawie książki Cay Horstmann, Gary Cornell.
-// "Java (TM). Podstawy." Wydanie VIII
-
-// Program wykorzystujący zbiór typu HashSet
-// w celu pokazania wszystkich słów odczytanych z System.in
-
+package wyklad;
+import java.io.FileNotFoundException;
 import java.util.*;
+import java.io.File;
 
-public class wyklad
+
+public class WordsInHashSetDemo
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws FileNotFoundException
     {
         // Klasa HashSet implementuje interfejs Set
         Set<String> words = new TreeSet<>();
         long totalTime = 0;
 
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(new File("src\\wyklad\\alice30.txt"));
         while (in.hasNext()) {
             String word = in.next();
             long callTime = System.currentTimeMillis();
@@ -32,3 +30,4 @@ public class wyklad
         System.out.println(words.size() + " unikalnych słów. " + totalTime + " milisekund.");
     }
 }
+
