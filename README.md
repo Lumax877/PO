@@ -1,1 +1,1 @@
-nr_albumu: 162416
+Bartosz Ochtabinski 162416 16:45
